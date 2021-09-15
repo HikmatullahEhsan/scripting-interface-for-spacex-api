@@ -38,4 +38,4 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
 ## Simple build for production
 
-    $ npm build
+    $ npm run-script build
