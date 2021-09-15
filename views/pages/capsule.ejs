@@ -1,0 +1,32 @@
+<% include ("../partials/header") %>
+
+<h1>Details of capsule</h1>
+<div class="container">
+	<div class="">
+	   <div class="col-md-12" style="margin-top: 10px;">
+	    
+	   </div>
+	</div>
+	<br>
+	<div>
+		<div class="col-md-12">
+			<div>
+                <h1><%= item.capsule_serial %></h1>
+                <div>
+                    ID: <%= item.capsule_id %>
+                </div>
+                <div>
+                    Status: <%= item.status %>
+                </div>
+                <div>
+                    Original Lunch:  <%= item.original_launch %>
+                </div>
+                <div>
+                    Details : <%= item.details %>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<% include ("../partials/footer") %>

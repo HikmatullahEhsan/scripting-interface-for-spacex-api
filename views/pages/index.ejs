@@ -1,0 +1,45 @@
+<% include ("../partials/header") %>
+
+<!-- <h1>Welcome to Node JS server</h1> -->
+<div class="container">
+	<div class="">
+	   <div class="col-md-12" style="margin-top: 10px;">
+	    
+	   </div>
+	</div>
+	<br>
+	<div>
+		<div class="col-md-12">
+			<% if(items.length>0) { %>
+			   <table class="table table-bordered">
+			   	 <thead>
+			   	 	<tr>
+			   	 		<td>ID</td>
+			   	 		<td>Full Name</td>
+			   	 		<td>Email</td>
+			   	 		<td>Address</td>
+			   	 		<td style="text-align: center;">Action</td>
+			   	 	</tr>
+			   	 </thead>
+			   	 <tbody>
+			   	 	<% items.forEach( function(item , index ){%>
+			   	 	<tr>
+			   	 		<td><%= index + 1 %></td>
+			   	 		<td><%= item.capsule_serial %></td>
+			   	 		<td><%= item.capsule_id %></td>
+			   	 		<td><%= item.status %></td>
+			   	 		<td align="center">
+			   	 			<a href="/capsule/<%= item.capsule_serial %>" class="btn btn-info"><i class="fa fa-info"></i>View Details</a>
+			   	 		</td>
+			   	 	</tr>
+			   	 	<% });  %>
+			   	 </tbody>
+			   </table>
+			<% }else {%>
+			   <h3 align="center">Wow, there is no record</h3>
+			<% } %>
+		</div>
+	</div>
+</div>
+
+<% include ("../partials/footer") %>
