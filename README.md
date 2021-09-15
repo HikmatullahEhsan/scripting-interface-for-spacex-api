@@ -20,9 +20,10 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
       $ sudo apt install nodejs
       $ sudo apt install npm
+      $ npm install npm -g
 
 
-    $ npm install npm -g
+    
 
 ###
 
