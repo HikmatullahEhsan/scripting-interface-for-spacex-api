@@ -24,9 +24,6 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
 
     
-
-###
-
 ## Install
 
     $ git clone https://github.com/HikmatullahEhsan/scripting-interface-for-spacex-api
