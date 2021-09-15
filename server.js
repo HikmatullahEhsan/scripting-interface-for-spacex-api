@@ -23,13 +23,6 @@ const {check, validationResult}= require('express-validator');
 //instaiting a node js ap
 var app= express();
 
-const con= mysql.createConnection({
-       host: 'localhost',
-       user: 'root',
-       password: '',
-       database: 'chatting'
-});
-
 
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -67,9 +60,11 @@ app.get("/", async (req, res) => {
 
 // details of each capsule
 app.get("/capsule/:id", async (req, res) => {
+    let capsuleId = req.params.id; // { userId: '42' }
+    
     let item;
     try {
-      const result = await axios.get(`https://api.spacexdata.com/v3/capsules/C101`).then((Response)=>{
+      const result = await axios.get(`https://api.spacexdata.com/v3/capsules/${capsuleId}`).then((Response)=>{
         item = Response.data;
       });
       res.render("pages/capsule", {
